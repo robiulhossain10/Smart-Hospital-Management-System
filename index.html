@@ -1,14 +1,56 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard with Counting</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body>
-  <h1 class="text-7xl text-cyan-600 text-center font-bold "> Smart Hospital Management System! </h1>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 p-6 max-w-5xl w-full">
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <h2 class="text-xl font-semibold mb-2">Total Patients</h2>
+      <p class="text-4xl font-bold text-blue-600 count" data-count="128">0</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <h2 class="text-xl font-semibold mb-2">Doctors</h2>
+      <p class="text-4xl font-bold text-green-600 count" data-count="25">0</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <h2 class="text-xl font-semibold mb-2">Appointments</h2>
+      <p class="text-4xl font-bold text-purple-600 count" data-count="46">0</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <h2 class="text-xl font-semibold mb-2">Emergency</h2>
+      <p class="text-4xl font-bold text-red-600 count" data-count="5">0</p>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.count').each(function () {
+        var $this = $(this);
+        var countTo = parseInt($this.attr('data-count'));
+        $({ countNum: 0 }).animate({ countNum: countTo }, {
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 
 </html>
