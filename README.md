@@ -2,7 +2,7 @@
 
 - [x] Guys Research And Development Smart Hospital Management System
 
-# Project X Team
+# Project X Team Member
 
 - [x] Robiul Hossain
 - [x] Tamima Mostafa Monisha
