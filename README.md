@@ -34,8 +34,3 @@ A modern web-based Smart Hospital Management System (SHMS) designed to improve p
 | Frontend | Backend | Database | Others |
 |----------|---------|----------|--------|
 | Angular  | Spring Boot | MySQL / MongoDB | Tailwind CSS, REST API |
-
-- [x] Tamima Mostafa Monisha
-- [x] Fahim Faiyaz Akib
-- [x] Rakib Mridha
-- [x] Syed Noor E Sams
