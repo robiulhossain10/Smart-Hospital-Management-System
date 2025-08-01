@@ -4,62 +4,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dashboard with Counting</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Smart Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.75);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
-  <div class="mt-10">
-    <h1 class="text-center md:text-7xl font-bold text-teal-600 text-4xl">Smart Hospital Management System</h1>
-  </div>
-
-  <div class="mt-[100px] w-[1200px] bg-emerald-600 text-center md:text-7xl font-bold text-rose-600 text-4xl mx-auto">
-    <marquee behavior="scroll" direction="left" scrollamount="25">Under Constructions!!
-    </marquee>
-  </div>
-
-  <div class="bg-gray-100 min-h-screen flex items-center justify-center">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 p-6 max-w-5xl w-full">
-      <div class="bg-white rounded-2xl shadow-md p-6 text-center">
-        <h2 class="text-xl font-semibold mb-2">Total Patients</h2>
-        <p class="text-4xl font-bold text-blue-600 count" data-count="128">0</p>
+  <!-- Navbar -->
+  <nav class="glass shadow-lg sticky top-0 z-50 rounded-b-xl">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img class="h-15 w-auto sm:h-12" src="img/5.png" alt="Logo" />
       </div>
-      <div class="bg-white rounded-2xl shadow-md p-6 text-center">
-        <h2 class="text-xl font-semibold mb-2">Doctors</h2>
-        <p class="text-4xl font-bold text-green-600 count" data-count="25">0</p>
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Home</a>
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Doctors</a>
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Patients</a>
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Appointments</a>
+        <a href="#"
+          class="flex items-center bg-green-600 text-white px-4 py-2 rounded-full shadow hover:bg-green-700 transition">
+          Login
+        </a>
       </div>
-      <div class="bg-white rounded-2xl shadow-md p-6 text-center">
-        <h2 class="text-xl font-semibold mb-2">Appointments</h2>
-        <p class="text-4xl font-bold text-purple-600 count" data-count="46">0</p>
-      </div>
-      <div class="bg-white rounded-2xl shadow-md p-6 text-center">
-        <h2 class="text-xl font-semibold mb-2">Emergency</h2>
-        <p class="text-4xl font-bold text-red-600 count" data-count="5">0</p>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
+    <div id="menu" class="md:hidden px-4 pb-4 hidden">
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Home</a>
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Doctors</a>
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Patients</a>
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Appointments</a>
+      <a href="#"
+        class="block py-2 text-white bg-green-600 rounded-full w-fit px-4 mt-2 hover:bg-green-700 transition">Login</a>
+    </div>
+  </nav>
+
+<section class="w-full relative overflow-hidden mt-[5px]" style="height: calc(100vh - 64px);">
+  <div class="flex w-full transition-transform duration-700 ease-in-out h-full" id="carousel">
+    <img src="https://static.vecteezy.com/system/resources/previews/002/423/253/non_2x/medical-hospital-building-outside-an-ambulance-car-next-to-the-hospital-building-isolated-medical-facility-exterior-view-with-trees-and-clouds-on-the-background-flat-illustration-vector.jpg" class="w-full h-full object-cover flex-shrink-0" />
+    <img src="https://www.myhospitalnow.com/hospitals/storage/hospital_profile/Evercare-Dhaka-scaled-1851150647_1719669157.jpeg" class="w-full h-full object-cover flex-shrink-0" />
+    <img src="https://stgaccinwbsdevlrs01.blob.core.windows.net/newcorporatewbsite/page-banner-details/December2023/WpNzdpmdsyNYop1JsYiM.webp?w=750&q=75" class="w-full h-full object-cover flex-shrink-0" />
   </div>
 
+  <button id="prev"
+    class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 text-gray-800 px-3 py-2 rounded-full shadow">◀</button>
+  <button id="next"
+    class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 text-gray-800 px-3 py-2 rounded-full shadow">▶</button>
+</section>
+
+
+
+
+
+  <!-- Script -->
   <script>
-    $(document).ready(function () {
-      $('.count').each(function () {
-        var $this = $(this);
-        var countTo = parseInt($this.attr('data-count'));
-        $({ countNum: 0 }).animate({ countNum: countTo }, {
-          duration: 2000,
-          easing: 'swing',
-          step: function () {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function () {
-            $this.text(this.countNum);
-          }
-        });
-      });
+    // Mobile menu toggle
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
     });
+
+    // Carousel logic
+    const carousel = document.getElementById("carousel");
+    const totalSlides = carousel.children.length;
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    document.getElementById("prev").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    // Auto slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }, 3000);
   </script>
 
 </body>
