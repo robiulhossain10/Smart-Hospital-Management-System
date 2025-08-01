@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.75);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="glass shadow-lg sticky top-0 z-50 rounded-b-xl" style="background-color: rgb(247, 245, 239);">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img class="h-30 w-auto sm:h-12" src="https://uhlbd.com/assets/images/updated_logo.png" alt="Logo" />
+      </div>
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Home</a>
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Doctors</a>
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Patients</a>
+        <a href="#" class="text-gray-800 font-medium hover:text-green-600 transition">Appointments</a>
+        <a href="#"
+          class="flex items-center bg-red-600 text-white px-4 py-2 rounded-full shadow hover:bg-green-600 transition">
+          Login
+        </a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="menu" class="md:hidden px-4 pb-4 hidden">
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Home</a>
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Doctors</a>
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Patients</a>
+      <a href="#" class="block py-2 text-gray-800 hover:text-green-600">Appointments</a>
+      <a href="#"
+        class="block py-2 text-white bg-green-600 rounded-full w-fit px-4 mt-2 hover:bg-green-700 transition">Login</a>
+    </div>
+  </nav>
+
+  <section class="w-full relative overflow-hidden mt-[5px]" style="height: calc(100vh - 64px);">
+    <div class="flex w-full transition-transform duration-700 ease-in-out h-full" id="carousel">
+      <img src="https://uhlbd.com/static/media/caseStudy.b452364d.png"
+        class="w-full h-full object-cover flex-shrink-0" />
+      <img
+        src="https://www.myhospitalnow.com/hospitals/storage/hospital_profile/Evercare-Dhaka-scaled-1851150647_1719669157.jpeg"
+        class="w-full h-full object-cover flex-shrink-0" />
+      <img
+        src="https://stgaccinwbsdevlrs01.blob.core.windows.net/newcorporatewbsite/page-banner-details/December2023/WpNzdpmdsyNYop1JsYiM.webp?w=750&q=75"
+        class="w-full h-full object-cover flex-shrink-0" />
+    </div>
+
+    <button id="prev"
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 text-gray-800 px-3 py-2 rounded-full shadow">◀</button>
+    <button id="next"
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-60 hover:bg-opacity-90 text-gray-800 px-3 py-2 rounded-full shadow">▶</button>
+  </section>
+
+
+
+
+
+  <!-- Script -->
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Carousel logic
+    const carousel = document.getElementById("carousel");
+    const totalSlides = carousel.children.length;
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    document.getElementById("prev").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    // Auto slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }, 3000);
+  </script>
+
+</body>
+
+</html>
