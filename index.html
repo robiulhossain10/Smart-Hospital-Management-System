@@ -59,6 +59,22 @@
       pointer-events: auto;
       position: relative;
     }
+
+    .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
   </style>
 </head>
 
@@ -75,27 +91,27 @@
         </label>
         <ul tabindex="0" id="menu" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
           absolute left-0 top-full hidden">
-          <li><a class="hover:text-rose-600 font-bold">Home</a></li>
-          <li><a class="hover:text-rose-600 font-bold">Doctors</a></li>
-          <li><a class="hover:text-rose-600 font-bold">Services</a></li>
-          <li><a class="hover:text-rose-600 font-bold">Contact</a></li>
+          <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+          <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+          <li><a href="" class="hover:text-rose-600 font-bold">Services</a></li>
+          <li><a href="" class="hover:text-rose-600 font-bold">Contact</a></li>
         </ul>
       </div>
-      <a class=" flex items-center">
+      <a href="index.html" class=" flex items-center">
         <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
       </a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a class="font-bold text-rose-500">Home</a></li>
-        <li><a class="font-bold">Doctors</a></li>
-        <li><a class="font-bold">Services</a></li>
-        <li><a class="font-bold">Contact</a></li>
+        <li><a href="index.html" class="font-bold text-rose-500">Home</a></li>
+        <li><a href="doctors.html" class="font-bold">Doctors</a></li>
+        <li><a href="" class="font-bold">Services</a></li>
+        <li><a href="" class="font-bold">Contact</a></li>
       </ul>
     </div>
     <div class="navbar-end">
       <a href="login.html"
-        class="btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
+        class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
     </div>
   </div>
 
