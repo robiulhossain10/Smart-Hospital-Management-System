@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Doctors</title>
+  <link rel="stylesheet" href="src/styles.css">
+    <!-- Tailwind CSS + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+      /* Navbar hover effect for menu items */
+      .menu-horizontal>li>a:hover {
+        color: #2563eb;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+          .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+<!-- Navbar -->
+<div class="navbar bg-white shadow-md px-6 py-3 sticky top-0 z-50">
+  <div class="navbar-start">
+    <div class="dropdown relative">
+      <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" id="menu" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
+          absolute left-0 top-full hidden">
+        <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+        <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+        <li><a href="" class="hover:text-rose-600 font-bold">Services</a></li>
+        <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
+      </ul>
+    </div>
+    <a href="index.html" class=" flex items-center">
+      <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="index.html" class="font-bold text-rose-500">Home</a></li>
+      <li><a href="doctors.html" class="font-bold">Doctors</a></li>
+      <li><a href="" class="font-bold">Services</a></li>
+      <li><a href="aboutUs.html" class="font-bold">About</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a href="login.html"
+      class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
+  </div>
+</div>
+
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl font-bold text-gray-900">Our Doctors</h1>
+    </div>
+  </header>
+
+  <!-- Doctors Grid -->
+  <main class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Doctor Card -->
+      <div class="bg-white rounded-2xl shadow p-5 flex flex-col items-center text-center">
+        <img class="w-32 h-32 rounded-full object-cover mb-4"
+          src="https://evercare-assets.com/_next/image?url=https%3A%2F%2Fdhaka.evercare-assets.com%2Fuploads%2Fimages%2Fconsultants%2F1742484372-45472512.jpg&w=256&q=75"
+          alt="Doctor Image">
+        <h2 class="text-xl font-semibold">Dr. Ayesha Akter</h2>
+        <p class="text-gray-500 mb-3">Cardiologist</p>
+        <button class="mt-auto px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">View
+          Profile</button>
+      </div>
+
+      <!-- Another Doctor -->
+      <div class="bg-white rounded-2xl shadow p-5 flex flex-col items-center text-center">
+        <img class="w-32 h-32 rounded-full object-cover mb-4"
+          src="https://evercare-assets.com/_next/image?url=https%3A%2F%2Fdhaka.evercare-assets.com%2Fuploads%2Fimages%2Fconsultants%2F1742285909-17679935.jpg&w=256&q=75"
+          alt="Doctor Image">
+        <h2 class="text-xl font-semibold">Dr. Rahim Uddin</h2>
+        <p class="text-gray-500 mb-3">Neurologist</p>
+        <button class="mt-auto px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">View
+          Profile</button>
+      </div>
+
+      <!-- Another Doctor -->
+      <div class="bg-white rounded-2xl shadow p-5 flex flex-col items-center text-center">
+        <img class="w-32 h-32 rounded-full object-cover mb-4"
+          src="https://evercare-assets.com/_next/image?url=https%3A%2F%2Fdhaka.evercare-assets.com%2Fuploads%2Fimages%2Fconsultants%2F1742467249-86942961.jpg&w=256&q=75"
+          alt="Doctor Image">
+        <h2 class="text-xl font-semibold">Dr. Nusrat Jahan</h2>
+        <p class="text-gray-500 mb-3">Dermatologist</p>
+        <button class="mt-auto px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">View
+          Profile</button>
+      </div>
+
+      <!-- Another Doctor -->
+      <div class="bg-white rounded-2xl shadow p-5 flex flex-col items-center text-center">
+        <img class="w-32 h-32 rounded-full object-cover mb-4"
+          src="https://evercare-assets.com/_next/image?url=https%3A%2F%2Fdhaka.evercare-assets.com%2Fuploads%2Fimages%2Fconsultants%2F1742159899-86436301.jpg&w=256&q=75"
+          alt="Doctor Image">
+        <h2 class="text-xl font-semibold">Prof. Dr. Raju Titus Chacko</h2>
+        <p class="text-gray-500 mb-3">Medical Oncology</p>
+        <button class="mt-auto px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">View
+          Profile</button>
+      </div>
+
+      <!-- Another Doctor -->
+      <div class="bg-white rounded-2xl shadow p-5 flex flex-col items-center text-center">
+        <img class="w-32 h-32 rounded-full object-cover mb-4"
+          src="https://evercare-assets.com/_next/image?url=https%3A%2F%2Fdhaka.evercare-assets.com%2Fuploads%2Fimages%2Fconsultants%2F1743877917-85012389.jpg&w=640&q=75"
+          alt="Doctor Image">
+        <h2 class="text-xl font-semibold">Dr. Md. Zulfiqur Haider</h2>
+        <p class="text-gray-500 mb-3">Senior Consultant & Coordinator</p>
+        <button class="mt-auto px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">View
+          Profile</button>
+      </div>
+
+      <!-- Another Doctor -->
+      <div class="bg-white rounded-2xl shadow p-5 flex flex-col items-center text-center">
+        <img class="w-32 h-32 rounded-full object-cover mb-4"
+          src="https://evercare-assets.com/_next/image?url=https%3A%2F%2Fdhaka.evercare-assets.com%2Fuploads%2Fimages%2Fconsultants%2F1742464830-55434560.jpg&w=256&q=75"
+          alt="Doctor Image">
+        <h2 class="text-xl font-semibold">Dr. Sohail Ahmed</h2>
+        <p class="text-gray-500 mb-3">Senior Consultant</p>
+        <button class="mt-auto px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">View
+          Profile</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner mt-12 py-6 text-center text-gray-600">
+    © 2025 Smart Hospital. All rights reserved.
+  </footer>
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Carousel functionality
+    const slides = document.querySelectorAll(".carousel-item");
+    let index = 0;
+    let intervalId;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => {
+        if (idx === i) {
+          slide.classList.add("active");
+        } else {
+          slide.classList.remove("active");
+        }
+      });
+
+      const currentSlide = slides[i];
+      gsap.fromTo(
+        currentSlide,
+        { opacity: 0, scale: 0.95 },
+        { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
+      );
+    }
+
+    function startCarousel() {
+      intervalId = setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 3500);
+    }
+
+    function stopCarousel() {
+      clearInterval(intervalId);
+    }
+
+    function goPrev() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    function goNext() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    showSlide(index);
+    startCarousel();
+
+    const carouselContainer = document.querySelector(".carousel");
+    carouselContainer.addEventListener("mouseenter", stopCarousel);
+    carouselContainer.addEventListener("mouseleave", startCarousel);
+
+    // Prev/Next button event listeners
+    document.querySelectorAll(".prev-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        stopCarousel();
+        goPrev();
+        startCarousel();
+      });
+    });
+
+    document.querySelectorAll(".next-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        stopCarousel();
+        goNext();
+        startCarousel();
+      });
+    });
+  </script>
+</body>
+
+</html>

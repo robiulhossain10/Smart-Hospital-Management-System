@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System - Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
@@ -80,6 +80,48 @@
     </style>
 </head>
 <body class="min-h-screen bg-gradient-subtle">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" style="background-color: rgb(247, 245, 239);">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="img/5.png" class="h-10" alt="Logo" />
+               
+            </div>
+    
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="#" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Specialities</a>
+                <a href="#">Health Check</a>
+                <a href="#">Online Report</a>
+                <a href="#">Patient Stories</a>
+                <a href="#">Career</a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+    
+    
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+            <a href="#" class="block py-2 text-sm text-gray-700">Home</a>
+            <a href="#" class="block py-2 text-sm text-gray-700">About Us</a>
+            <a href="#" class="block py-2 text-sm text-gray-700">Specialities</a>
+            <a href="#" class="block py-2 text-sm text-gray-700">Health Check</a>
+            <a href="#" class="block py-2 text-sm text-gray-700">Online Report</a>
+            <a href="#" class="block py-2 text-sm text-gray-700">Patient Stories</a>
+            <a href="#" class="block py-2 text-sm text-gray-700">Career</a>
+        </div>
+    </nav>
     <!-- Background Medical Icons -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <div class="medical-icon absolute top-20 left-10 opacity-20 animate-float" style="animation-delay: 0s;"></i></div>
@@ -95,7 +137,7 @@
         <div class="w-full max-w-md bg-card rounded-lg shadow-card  px-8 ">
             <!-- Header -->
              <div class="mx-auto  opacity-80 flex  items-start w-80  h-64">
-                    <img src="1.png" class=" mx-auto py-6 " alt="">
+                    <img src="img/1.png" class=" mx-auto py-6 " alt="">
                 </div>
             <div class="text-center mb-6 mt-8">
                 
