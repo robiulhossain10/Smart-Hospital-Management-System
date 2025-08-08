@@ -21,6 +21,22 @@
             }
         }
 
+            /* Navbar hover effect for menu items */
+    .menu-horizontal>li>a:hover {
+      color: #2563eb;
+    
+     
+    }
+    .menu {
+
+        display: flex;
+        gap: 8rem ;
+        margin-left: 15rem;
+        align-items: center;
+
+
+    }
+
         .bg-animate {
             background: linear-gradient(-45deg, #00b4d8, #48cae4, #90e0ef, #0077b6);
             background-size: 300% 300%;
@@ -133,39 +149,83 @@
         .progress-step.active:not(:last-child)::after {
             background-color: #0077b6;
         }
+      
+  
+    
+    .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
+
     </style>
 </head>
 
 
 <body>
 
-    <div>
-        <!-- Navbar -->
-      <div class="nav">
-
-              <nav class="bg-white shadow-md sticky top-0 z-50" style="background-color: rgb(247, 245, 239);">
-            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <img src="https://uhlbd.com/assets/images/updated_logo.png" class="h-10" alt="Logo" />
-                    <div class="text-lg font-bold text-gray-700">United <br /> <span
-                            class="text-xs text-gray-500">HOSPITAL
-                            Dhaka</span></div>
-                </div>
-        </div>
-
-
-
+         <!-- Navbar -->
+  <div class="navbar flex bg-white shadow-md px-6 py-1  absolute top-0 w-full z-50">
+    <div class="navbar-start  ">
+      <div class="dropdown relative ">
+        <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" id="menu" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
+          absolute left-0 top-full hidden">
+          <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+          <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+          <li><a href="" class="hover:text-rose-600 font-bold">Services</a></li>
+          <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
+        </ul>
       </div>
+      <a href="index.html" class=" flex items-center">
+        <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html" class="font-bold text-rose-500">Home</a></li>
+        <li><a href="doctors.html" class="font-bold">Doctors</a></li>
+        <li><a href="" class="font-bold">Services</a></li>
+        <li><a href="aboutUs.html" class="font-bold">About</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end ms-48 mt-3">
+      <a href="login.html"
+        class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold pb-1">Login</a>
+    </div>
+  </div>
+
+            
 
 
-            <div class="body h-screen flex items-center justify-center bg-animate p-4">
+   
 
 
-                <div class="bg-white shadow-lg rounded-xl p-16  w-full max-w-2xl animate-fadeIn ">
-                    <!-- <img src="img/5.png" alt=""> -->
 
-                    <h1 class="text-3xl font-bold text-center text-[black] mb-12 ">Patient's Information</h1>
+   
+
+
+            <div class="body h-screen flex items-center justify-center bg-animate  ">
+
+
+                <div class="bg-white shadow-lg rounded-xl px-8 py-4  w-full max-w-2xl animate-fadeIn ">
+                    <img src="img/5.png" class="mx-auto h-[100px] py-2 mb-2" alt="">
+
+                    <h1 class="text-3xl font-bold text-center text-[black] mb-4 ">Patient's Information</h1>
 
                     <!-- Progress Bar -->
                     <div class="progress-container" id="progressBar">
