@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Hospital Management System</title>
+  <link rel="stylesheet" href="src/styles.css">
+
+  <!-- Tailwind CSS + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    /* Navbar hover effect for menu items */
+    .menu-horizontal>li>a:hover {
+      color: #2563eb;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    /* Action buttons scale on hover */
+    .action-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-black font-sans">
+
+  <!-- Navbar -->
+  <div class="navbar bg-white shadow-md px-6 py-3 sticky top-0 z-50">
+    <div class="navbar-start">
+      <div class="dropdown relative">
+        <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" id="menu" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
+          absolute left-0 top-full hidden">
+          <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+          <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+          <li><a href="" class="hover:text-rose-600 font-bold">Services</a></li>
+          <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class=" flex items-center">
+        <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html" class="font-bold text-rose-500">Home</a></li>
+        <li><a href="doctors.html" class="font-bold">Doctors</a></li>
+        <li><a href="" class="font-bold">Services</a></li>
+        <li><a href="aboutUs.html" class="font-bold">About</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="login.html"
+        class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
+    </div>
+  </div>
+
+
+
+  <!-- About Our Hospital -->
+  <section class="text-center px-6 py-10 bg-sky-100 shadow-sm">
+    <h1 class="text-4xl font-bold text-blue-800 mb-6">About Our Hospital</h1>
+    <p class="max-w-4xl mx-auto text-lg leading-relaxed">
+      Hospital Care Medical Center is renowned for its top-notch patient care, combining advanced
+      medical technology with compassionate service. Our highly skilled, internationally trained medical professionals
+      provide expert care across various specialties, ensuring patients receive advanced and comprehensive care under one roof
+      and transforming healthcare in Bangladesh. At our hospital, we offer cutting-edge tertiary and quaternary services,
+      including critical care, laparoscopic surgery, bone marrow transplants, and knee replacements.
+      Our multidisciplinary teams work seamlessly to deliver precise and personalized care, ensuring that each patient
+      receives the most effective solutions. Whether you're in need of urgent critical care or advanced surgical
+      procedures, our commitment to excellence means you're in the best hands possible. Our 40+ specialty services
+      provide expert care tailored to meet your unique health needs and support you every step of the way.
+    </p>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="px-6 py-10 bg-sky-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Why Choose Us</h2>
+      <p class="text-lg mb-6">
+        We are a state-of-the-art facility accredited by national and international health bodies. Our multidisciplinary teams
+        leverage cutting-edge technology and personalized care models to deliver superior outcomes.
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-base text-gray-700">
+        <li>User-Friendly Interface</li>
+        <li>Secure Data Handling & Privacy</li>
+        <li>Customizable Modules for Any Hospital Size</li>
+        <li>24/7 Technical Support</li>
+        <li>Affordable Pricing with Rich Features</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Our Specialties -->
+  <section class="px-6 py-10 bg-sky-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-blue-800 mb-8">Our Specialties</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white border rounded-lg overflow-hidden shadow">
+          <img src="img/Cardiology.jpg" alt="Cardiology" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Cardiology</h3>
+            <p>Expert heart care with latest diagnostics and treatments.</p>
+          </div>
+        </div>
+
+        <div class="bg-white border rounded-lg overflow-hidden shadow">
+          <img src="img/cancer.jpg" alt="Cancer Care" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Cancer Care</h3>
+            <p>Comprehensive cancer treatments with precision medicine.</p>
+          </div>
+        </div>
+
+        <div class="bg-white border rounded-lg overflow-hidden shadow">
+          <img src="img/Cardiology.jpg" alt="Cardiology" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Cardiology</h3>
+            <p>Expert heart care with latest diagnostics and treatments.</p>
+          </div>
+        </div>
+
+        <div class="bg-white border rounded-lg overflow-hidden shadow">
+          <img src="img/cancer.jpg" alt="Cancer Care" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Cancer Care</h3>
+            <p>Comprehensive cancer treatments with precision medicine.</p>
+          </div>
+        </div>
+
+        <div class="bg-white border rounded-lg overflow-hidden shadow">
+          <img src="img/Cardiology.jpg" alt="Cardiology" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Cardiology</h3>
+            <p>Expert heart care with latest diagnostics and treatments.</p>
+          </div>
+        </div>
+
+        <div class="bg-white border rounded-lg overflow-hidden shadow">
+          <img src="img/cancer.jpg" alt="Cancer Care" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Cancer Care</h3>
+            <p>Comprehensive cancer treatments with precision medicine.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center bg-gray-400">
+    <p>&copy; 2025 Hospital Care Medical Center | All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

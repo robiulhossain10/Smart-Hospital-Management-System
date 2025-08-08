@@ -1,0 +1,42 @@
+/* Global Reset & Typography */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; color: #333; background: #f9f9f9; line-height: 1.6; }
+
+/* Hero Section */
+.hero {
+  background: url('hospital-hero.jpg') center/cover no-repeat;
+  color: rgb(22, 3, 3);
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; max-width: 700px; margin: auto; }
+
+/* Navigation */
+nav { background: #005366; }
+nav ul { display: flex; justify-content: center; list-style: none; padding: 10px; }
+nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+nav a:hover { color: #a8d8de; }
+
+/* Container */
+.container { max-width: 1000px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; }
+
+/* Section Headings */
+h2.section-title { color: #005366; margin-bottom: 20px; font-size: 2rem; }
+
+/* Cards for specialties/testimonials */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
+.card { border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+.card img { width: 100%; height: 160px; object-fit: cover; }
+.card .content { padding: 15px; }
+
+/* Contact Form */
+form label { display: block; margin: 15px 0 5px; font-weight: 500; }
+form input, form textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; }
+form button { background: #005366; color: white; padding: 12px 25px; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; margin-top: 15px; }
+form button:hover { background: #003f4f; }
+
+/* Footer */
+footer { background: #005366; color: white; text-align: center; padding: 25px 20px; font-size: 0.9rem; }
+footer a { color: #a8d8de; text-decoration: none; }
+
