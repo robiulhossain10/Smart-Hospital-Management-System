@@ -5,12 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Doctors</title>
-  <link rel="stylesheet" href="src/styles.css">
+  <!-- <link rel="stylesheet" href="src/styles.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <!-- Tailwind CSS + DaisyUI -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
+    body {
+      font-family: "Roboto", sans-serif;
+    }
     /* Navbar hover effect for menu items */
     .menu-horizontal>li>a:hover {
       color: #2563eb;
@@ -66,10 +73,13 @@
         <li><a href="aboutUs.html" class="font-bold">About</a></li>
       </ul>
     </div>
-    <div class="navbar-end">
-      <a href="login.html"
-        class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
-    </div>
+<div class="navbar-end">
+  <a href="login.html"
+    class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-bold text-white rounded-full shadow-lg bg-gradient-to-r from-teal-500 to-teal-600 hover:from-amber-400 hover:to-amber-500 hover:text-black transition-all duration-300 ease-out transform hover:scale-105">
+    Login
+  </a>
+</div>
+
   </div>
 
   <section class="py-16 bg-gray-50">
@@ -147,8 +157,74 @@
 
 
   <!-- Footer -->
-  <footer class="bg-white shadow-inner mt-12 py-6 text-center text-gray-600">
-    © 2025 Smart Hospital. All rights reserved.
+  <footer class="relative bg-gradient-to-r from-sky-500 via-indigo-700 to-blue-800 text-white">
+  
+    <!-- Wave Shape -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
+      <svg class="relative block w-full h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+        preserveAspectRatio="none">
+        <path fill="#f9fafb"
+          d="M0,0V46.29c47.19,22,103.93,39.25,162,39.25,78,0,147-35,229-35s150,35,229,35,151-35,229-35,150,35,229,35,115.81-15.36,162-33.19V0Z">
+        </path>
+      </svg>
+    </div>
+  
+    <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+  
+      <!-- About -->
+      <div>
+        <img src="img/5.png" class="object-cover w-36" alt="">
+        <p class="text-gray-200">
+          Bringing modern healthcare closer to you with advanced facilities and expert doctors.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">🏠 Home</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">ℹ️ About Us</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">🩺 Services</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">👨‍⚕️ Doctors</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">📞 Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Our Services</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">Doctor Management</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">Appointment Booking</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">Room & Ward Management</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">Pharmacy</a></li>
+          <li><a href="#" class="hover:pl-2 hover:text-yellow-300 transition-all">Billing</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <p class="flex items-center gap-2"><span>📍</span> 123, Medical Road, City, Country</p>
+        <p class="flex items-center gap-2"><span>📞</span> +880 123 456 789</p>
+        <p class="flex items-center gap-2"><span>✉️</span> info@smarthospital.com</p>
+  
+        <!-- Social -->
+        <div class="flex gap-4 mt-4 text-2xl">
+          <a href="#" class="hover:text-yellow-300 transition">🌐</a>
+          <a href="#" class="hover:text-yellow-300 transition">📘</a>
+          <a href="#" class="hover:text-yellow-300 transition">🐦</a>
+          <a href="#" class="hover:text-yellow-300 transition">📸</a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div class="bg-blue-900 text-center py-4 text-gray-300 text-sm relative z-10">
+      © 2025 Smart Hospital Management. All rights reserved.
+    </div>
   </footer>
   <script>
     // Mobile menu toggle
