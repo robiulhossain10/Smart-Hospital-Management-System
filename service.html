@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Doctors</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <!-- Tailwind CSS + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    /* Navbar hover effect for menu items */
+    .menu-horizontal>li>a:hover {
+      color: #2563eb;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <div class="navbar bg-white shadow-md px-6 py-3 sticky top-0 z-50">
+    <div class="navbar-start">
+      <div class="dropdown relative">
+        <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" id="menu" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
+          absolute left-0 top-full hidden">
+          <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+          <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+          <li><a href="" class="hover:text-rose-600 font-bold">Services</a></li>
+          <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class=" flex items-center">
+        <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html" class="font-bold">Home</a></li>
+        <li><a href="doctors.html" class="font-bold ">Doctors</a></li>
+        <li><a href="" class="font-bold text-rose-500">Services</a></li>
+        <li><a href="aboutUs.html" class="font-bold">About</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="login.html"
+        class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
+    </div>
+  </div>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Section Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 sm:text-4xl">
+          Our Hospital Services
+        </h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+          We provide top-notch healthcare services with modern facilities and expert medical professionals.
+        </p>
+      </div>
+  
+      <!-- Service Cards -->
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-4">
+            🩺
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Doctor Management</h3>
+          <p class="mt-3 text-gray-600">Manage doctor schedules, profiles, and availability efficiently.</p>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4">
+            📅
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Appointment Booking</h3>
+          <p class="mt-3 text-gray-600">Easily schedule appointments with doctors through our system.</p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full mb-4">
+            🛏️
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Room & Ward Management</h3>
+          <p class="mt-3 text-gray-600">Organize hospital rooms, wards, and patient allocations seamlessly.</p>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-purple-100 text-purple-600 rounded-full mb-4">
+            💊
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Pharmacy & Medicine</h3>
+          <p class="mt-3 text-gray-600">Track medicines, prescriptions, and pharmacy stock efficiently.</p>
+        </div>
+  
+        <!-- Card 5 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-red-100 text-red-600 rounded-full mb-4">
+            📊
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Admin Dashboard</h3>
+          <p class="mt-3 text-gray-600">Monitor hospital activities with detailed analytics and reports.</p>
+        </div>
+  
+        <!-- Card 6 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-pink-100 text-pink-600 rounded-full mb-4">
+            💳
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Billing & Invoices</h3>
+          <p class="mt-3 text-gray-600">Generate patient bills and manage payment records easily.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner mt-12 py-6 text-center text-gray-600">
+    © 2025 Smart Hospital. All rights reserved.
+  </footer>
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Carousel functionality
+    const slides = document.querySelectorAll(".carousel-item");
+    let index = 0;
+    let intervalId;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => {
+        if (idx === i) {
+          slide.classList.add("active");
+        } else {
+          slide.classList.remove("active");
+        }
+      });
+
+      const currentSlide = slides[i];
+      gsap.fromTo(
+        currentSlide,
+        { opacity: 0, scale: 0.95 },
+        { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
+      );
+    }
+
+    function startCarousel() {
+      intervalId = setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 3500);
+    }
+
+    function stopCarousel() {
+      clearInterval(intervalId);
+    }
+
+    function goPrev() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    function goNext() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    showSlide(index);
+    startCarousel();
+
+    const carouselContainer = document.querySelector(".carousel");
+    carouselContainer.addEventListener("mouseenter", stopCarousel);
+    carouselContainer.addEventListener("mouseleave", startCarousel);
+
+    // Prev/Next button event listeners
+    document.querySelectorAll(".prev-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        stopCarousel();
+        goPrev();
+        startCarousel();
+      });
+    });
+
+    document.querySelectorAll(".next-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        stopCarousel();
+        goNext();
+        startCarousel();
+      });
+    });
+  </script>
+</body>
+
+</html>
