@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System - Login</title>
+    <title>Login</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
+<!-- Tailwind CSS + DaisyUI -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -99,39 +102,67 @@
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
+         /* Navbar hover effect for menu items */
+      .menu-horizontal>li>a:hover {
+        color: #2563eb;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+          .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
     </style>
 </head>
 
 <body class="min-h-screen bg-sky-200">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50" style="background-color: rgb(247, 245, 239);">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <img src="img/5.png" class="h-10" alt="Logo" />
-
-            </div>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6 text-sm">
-                <a href="#" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Specialities</a>
-                <a href="#">Health Check</a>
-                <a href="#">Online Report</a>
-                <a href="#">Patient Stories</a>
-                <a href="#">Career</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
+<!-- Navbar -->
+<div class="navbar bg-white shadow-md px-6 py-3 sticky top-0 z-50">
+    <div class="navbar-start">
+        <div class="dropdown relative">
+            <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </label>
+            <ul tabindex="0" id="menu" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
+          absolute left-0 top-full hidden">
+                <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+                <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+                <li><a href="service.html" class="hover:text-rose-600 font-bold">Services</a></li>
+                <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
+            </ul>
+        </div>
+        <a href="index.html" class=" flex items-center">
+            <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
+        </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a href="index.html" class="font-bold">Home</a></li>
+            <li><a href="doctors.html" class="font-bold ">Doctors</a></li>
+            <li><a href="service.html" class="font-bold">Services</a></li>
+            <li><a href="aboutUs.html" class="font-bold">About</a></li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a href="login.html"
+            class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
+    </div>
+</div>
 
 
             <!-- Mobile Menu Dropdown -->
@@ -290,6 +321,14 @@
             e.preventDefault();
             alert('Doctor login functionality would be implemented here');
         });
+
+         // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
     </script>
 </body>
 
