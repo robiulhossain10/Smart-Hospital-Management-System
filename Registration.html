@@ -4,9 +4,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Smart Hospital - Patient Registration</title>
+    <title>Registration</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS + DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
+              /* Navbar hover effect for menu items */
+      .menu-horizontal>li>a:hover {
+        color: #2563eb;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+          .box {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        background-color: yellowgreen;
+      }
+
+      50% {
+        background-color: purple;
+      }
+    }
         @keyframes gradientMove {
             0% {
                 background-position: 0% 50%;
@@ -21,21 +47,7 @@
             }
         }
 
-            /* Navbar hover effect for menu items */
-    .menu-horizontal>li>a:hover {
-      color: #2563eb;
-    
-     
-    }
-    .menu {
 
-        display: flex;
-        gap: 8rem ;
-        margin-left: 15rem;
-        align-items: center;
-
-
-    }
 
         .bg-animate {
             background: linear-gradient(-45deg, #00b4d8, #48cae4, #90e0ef, #0077b6);
@@ -174,49 +186,41 @@
 
 <body>
 
-         <!-- Navbar -->
-  <div class="navbar flex bg-white shadow-md px-6 py-1   top-0 w-full z-50">
-    <div class="navbar-start  ">
-      <div class="dropdown relative ">
-        <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </label>
-        <ul tabindex="0" id="menu" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
-          absolute left-0 top-full hidden">
-          <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
-          <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
-          <li><a href="" class="hover:text-rose-600 font-bold">Services</a></li>
-          <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
-        </ul>
-      </div>
-      <a href="index.html" class=" flex items-center">
-        <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
-      </a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a href="index.html" class="font-bold text-rose-500">Home</a></li>
-        <li><a href="doctors.html" class="font-bold">Doctors</a></li>
-        <li><a href="" class="font-bold">Services</a></li>
-        <li><a href="aboutUs.html" class="font-bold">About</a></li>
-      </ul>
-    </div>
-    <div class="navbar-end ms-48 mt-3">
-      <a href="login.html"
-        class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold pb-1">Login</a>
-    </div>
-  </div>
-
-            
-
-
-   
-
-
-
-   
+        <!-- Navbar -->
+        <div class="navbar bg-white shadow-md px-6 py-3 sticky top-0 z-50">
+            <div class="navbar-start">
+                <div class="dropdown relative">
+                    <label tabindex="0" id="menu-btn" class="btn btn-ghost lg:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" id="menu" class=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52
+                  absolute left-0 top-full hidden">
+                        <li><a href="index.html" class="hover:text-rose-600 font-bold">Home</a></li>
+                        <li><a href="doctors.html" class="hover:text-rose-600 font-bold">Doctors</a></li>
+                        <li><a href="service.html" class="hover:text-rose-600 font-bold">Services</a></li>
+                        <li><a href="aboutUs.html" class="hover:text-rose-600 font-bold">About</a></li>
+                    </ul>
+                </div>
+                <a href="index.html" class=" flex items-center">
+                    <img src="./img/5.png" alt="Smart Hospital Logo" class="h-12 w-auto object-contain" />
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="index.html" class="font-bold">Home</a></li>
+                    <li><a href="doctors.html" class="font-bold">Doctors</a></li>
+                    <li><a href="service.html" class="font-bold">Services</a></li>
+                    <li><a href="aboutUs.html" class="font-bold">About</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="login.html"
+                    class="box btn btn-sm bg-teal-500 text-blue-50 px-6 hover:bg-amber-400 hover:text-black transition font-bold">Login</a>
+            </div>
+        </div>
 
 
             <div class="body h-screen flex items-center justify-center bg-animate  ">
@@ -473,6 +477,14 @@
                 });
 
                 showStep(currentStep);
+
+                 // Mobile menu toggle
+                    const menuBtn = document.getElementById('menu-btn');
+                    const menu = document.getElementById('menu');
+
+                    menuBtn.addEventListener('click', () => {
+                        menu.classList.toggle('hidden');
+                    });
             </script>
 
 </body>
